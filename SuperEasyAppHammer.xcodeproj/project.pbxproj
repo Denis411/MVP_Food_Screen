@@ -18,6 +18,9 @@
 		8D506A4129DA95AB00C42C91 /* MenuScreenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4029DA95AB00C42C91 /* MenuScreenComponent.swift */; };
 		8D506A4429DAA2FB00C42C91 /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4329DAA2FB00C42C91 /* TapBarController.swift */; };
 		8D506A4629DAA3B400C42C91 /* TapBarControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4529DAA3B400C42C91 /* TapBarControllerComponent.swift */; };
+		8D506A4B29DAB56400C42C91 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4A29DAB56400C42C91 /* MenuTableView.swift */; };
+		8D506A4D29DABEA600C42C91 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4C29DABEA600C42C91 /* MenuTableViewCell.swift */; };
+		8D506A4F29DABECE00C42C91 /* MenuCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4E29DABECE00C42C91 /* MenuCellInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		8D506A4029DA95AB00C42C91 /* MenuScreenComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenComponent.swift; sourceTree = "<group>"; };
 		8D506A4329DAA2FB00C42C91 /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		8D506A4529DAA3B400C42C91 /* TapBarControllerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarControllerComponent.swift; sourceTree = "<group>"; };
+		8D506A4A29DAB56400C42C91 /* MenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
+		8D506A4C29DABEA600C42C91 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		8D506A4E29DABECE00C42C91 /* MenuCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellInfo.swift; sourceTree = "<group>"; };
 		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +101,7 @@
 		8D506A3829DA8FFD00C42C91 /* MenuScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8D506A4829DAB51800C42C91 /* CustomViews */,
 				8D506A4029DA95AB00C42C91 /* MenuScreenComponent.swift */,
 				8D506A2829DA8DA300C42C91 /* MenuViewController.swift */,
 			);
@@ -125,6 +132,24 @@
 				8D506A4529DAA3B400C42C91 /* TapBarControllerComponent.swift */,
 			);
 			path = TapBarController;
+			sourceTree = "<group>";
+		};
+		8D506A4829DAB51800C42C91 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8D506A4E29DABECE00C42C91 /* MenuCellInfo.swift */,
+				8D506A4929DAB52C00C42C91 /* MenuTableView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8D506A4929DAB52C00C42C91 /* MenuTableView */ = {
+			isa = PBXGroup;
+			children = (
+				8D506A4A29DAB56400C42C91 /* MenuTableView.swift */,
+				8D506A4C29DABEA600C42C91 /* MenuTableViewCell.swift */,
+			);
+			path = MenuTableView;
 			sourceTree = "<group>";
 		};
 		B8EEA826348D5CCD89C3F4C7 /* Frameworks */ = {
@@ -273,7 +298,10 @@
 				8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */,
 				8D506A4429DAA2FB00C42C91 /* TapBarController.swift in Sources */,
 				8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */,
+				8D506A4F29DABECE00C42C91 /* MenuCellInfo.swift in Sources */,
 				8D506A4629DAA3B400C42C91 /* TapBarControllerComponent.swift in Sources */,
+				8D506A4D29DABEA600C42C91 /* MenuTableViewCell.swift in Sources */,
+				8D506A4B29DAB56400C42C91 /* MenuTableView.swift in Sources */,
 				8D506A4129DA95AB00C42C91 /* MenuScreenComponent.swift in Sources */,
 				8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */,
 				8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */,

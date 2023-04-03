@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import SnapKit
 
 class MenuViewController: UIViewController {
+    private let tableView = MenuTableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 
 
