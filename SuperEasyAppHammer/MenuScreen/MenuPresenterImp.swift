@@ -38,6 +38,28 @@ extension MenuPresenterImp: MenuPresenterFunctionality {
     }
 
     func loadDishesCellInfo(for dishType: DishType?) {
+        dishTypeCellInfo = []
+        
+        for type in availableTypesOfDishes {
+            let isSelected = (type == dishType) ? true : false
+            let info = DishTypeCellInfo(dishType: type, isSelected: isSelected)
+            dishTypeCellInfo.append(info)
+        }
+
+        view?.setDishTypeCellInfo(cellInfo: dishTypeCellInfo)
+
+//      load dish cell info from the internet for a given type
+
+        let fakeDishCellInfo = Array(repeating: 1, count: 10).map { _ in
+            MenuDishTableViewCellInfo(
+                image: nil,
+                name: String(Int.random(in: 0...200000)),
+                description: "Random",
+                buttonText: "Random"
+            )        }
+
+        view?.setDishCellInfo(cellInfo: fakeDishCellInfo)
+
 
     }
 }

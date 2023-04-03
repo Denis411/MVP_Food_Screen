@@ -11,6 +11,7 @@ final class DishTypeCellView: UILabel {
     private let BOTTOM_INSET = 10.0
     private(set) var dishType: DishType? = nil
     var dishTypeDelegate: DishTypeCellViewDelegate?
+
     private var isSelected: Bool = false
 
     override var intrinsicContentSize: CGSize {
@@ -74,6 +75,12 @@ extension DishTypeCellView {
         assert(dishType != nil)
 
         dishTypeDelegate?.didChangeDishType(dishType: dishType)
+
+        if isSelected {
+            self.layer.backgroundColor = UIColor.blue.cgColor
+        } else {
+            self.layer.backgroundColor = UIColor.clear.cgColor
+        }
     }
 }
 

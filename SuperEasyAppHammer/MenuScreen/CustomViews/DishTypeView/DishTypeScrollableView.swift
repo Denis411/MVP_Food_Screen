@@ -24,11 +24,15 @@ final class DishTypeScrollableView: UIView {
     func setDishTypeCellInfo(_ cellInfo: [DishTypeCellInfo]) {
         self.cellInfo = cellInfo
 // TODO: Create dequeueing cells use flyweight pattern
+        horizontalStack.arrangedSubviews.forEach { view in
+            view.removeFromSuperview()
+        }
+        
         for info in cellInfo {
             let dishTypeCellView = DishTypeCellView()
-            dishTypeCellView.dishTypeDelegate = dishTypeDelegate
             dishTypeCellView.setDishType(info.dishType)
             dishTypeCellView.setSelectionState(isSelected: info.isSelected)
+            dishTypeCellView.dishTypeDelegate = dishTypeDelegate
             horizontalStack.addArrangedSubview(dishTypeCellView)
         }
     }
