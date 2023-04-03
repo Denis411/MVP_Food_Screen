@@ -16,7 +16,7 @@ final class MenuTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setCellInfo(_ info: MenuCellInfo) {
+    func setCellInfo(_ info: MenuDishTableViewCellInfo) {
         self.dishImageView.image = info.image
         self.dishNameTitle.text = info.name
         self.dishDescriptionTitle.text = info.description

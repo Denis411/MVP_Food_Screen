@@ -1,6 +1,8 @@
 import UIKit
 
 final class MenuTableView: UITableView {
+    private var dishCellInfo: [MenuDishTableViewCellInfo] = []
+
     init() {
         super.init(frame: .zero, style: .plain)
         setSelf()
@@ -34,11 +36,9 @@ extension MenuTableView: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as! MenuTableViewCell
 
-        let mock = MenuCellInfo.getMockData()
+        let mock = MenuDishTableViewCellInfo.getMockData()
         cell.setCellInfo(mock)
 
         return cell
     }
-
-
 }

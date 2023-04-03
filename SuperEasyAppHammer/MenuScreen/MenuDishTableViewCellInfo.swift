@@ -1,15 +1,15 @@
 import UIKit
 
-struct MenuCellInfo {
+struct MenuDishTableViewCellInfo {
     let image: UIImage?
     let name: String?
     let description: String?
     let buttonText: String?
 }
 
-extension MenuCellInfo {
+extension MenuDishTableViewCellInfo {
     static func getMockData() -> Self {
-        MenuCellInfo(
+        MenuDishTableViewCellInfo(
             image: UIImage(systemName: "person")!,
             name: "Name",
             description: "Description",
