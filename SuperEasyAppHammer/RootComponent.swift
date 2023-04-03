@@ -5,18 +5,39 @@ import NeedleFoundation
 final class RootComponent: BootstrapComponent {
     var navigationController: UINavigationController {
         shared {
-            let rootViewController = UIViewController()
+            let rootViewController = self.tapBarControllerComponent.getTapBarController()
             rootViewController.view.backgroundColor = .white
             let navigationController = UINavigationController(rootViewController: rootViewController)
             navigationController.isNavigationBarHidden = true
             navigationController.isToolbarHidden = true
-            let startingVC = self.menuScreenComponent.getMainViewController()
-            navigationController.pushViewController(
-                startingVC , animated: false
-            )
             return navigationController
         }
     }
 
+    
+    var tapBarControllerComponent: TapBarControllerComponent {
+        TapBarControllerComponent(parent: self)
+    }
     var menuScreenComponent: MenuScreenComponent { MenuScreenComponent() }
+}
+
+// MARK: Mocks
+extension RootComponent {
+    var contactViewController: UIViewController {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .blue
+        return vc
+    }
+
+    var profileViewController: UIViewController {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .yellow
+        return vc
+    }
+
+    var trashBidViewController: UIViewController {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .red
+        return vc
+    }
 }

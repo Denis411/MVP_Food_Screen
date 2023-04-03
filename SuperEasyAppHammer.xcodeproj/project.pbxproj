@@ -16,6 +16,8 @@
 		8D506A3D29DA919000C42C91 /* Needle.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A3C29DA919000C42C91 /* Needle.generated.swift */; };
 		8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A3E29DA928100C42C91 /* RootComponent.swift */; };
 		8D506A4129DA95AB00C42C91 /* MenuScreenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4029DA95AB00C42C91 /* MenuScreenComponent.swift */; };
+		8D506A4429DAA2FB00C42C91 /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4329DAA2FB00C42C91 /* TapBarController.swift */; };
+		8D506A4629DAA3B400C42C91 /* TapBarControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4529DAA3B400C42C91 /* TapBarControllerComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		8D506A3C29DA919000C42C91 /* Needle.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Needle.generated.swift; sourceTree = "<group>"; };
 		8D506A3E29DA928100C42C91 /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
 		8D506A4029DA95AB00C42C91 /* MenuScreenComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenComponent.swift; sourceTree = "<group>"; };
+		8D506A4329DAA2FB00C42C91 /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
+		8D506A4529DAA3B400C42C91 /* TapBarControllerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarControllerComponent.swift; sourceTree = "<group>"; };
 		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,7 @@
 				8D506A3E29DA928100C42C91 /* RootComponent.swift */,
 				8D506A3A29DA905500C42C91 /* Generated */,
 				8D506A3929DA900E00C42C91 /* Standard */,
+				8D506A4729DAA87E00C42C91 /* TapBarController */,
 				8D506A3829DA8FFD00C42C91 /* MenuScreen */,
 				8D506A2D29DA8DA600C42C91 /* Assets.xcassets */,
 				8D506A2F29DA8DA600C42C91 /* LaunchScreen.storyboard */,
@@ -111,6 +116,15 @@
 				8D506A3C29DA919000C42C91 /* Needle.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		8D506A4729DAA87E00C42C91 /* TapBarController */ = {
+			isa = PBXGroup;
+			children = (
+				8D506A4329DAA2FB00C42C91 /* TapBarController.swift */,
+				8D506A4529DAA3B400C42C91 /* TapBarControllerComponent.swift */,
+			);
+			path = TapBarController;
 			sourceTree = "<group>";
 		};
 		B8EEA826348D5CCD89C3F4C7 /* Frameworks */ = {
@@ -257,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */,
+				8D506A4429DAA2FB00C42C91 /* TapBarController.swift in Sources */,
 				8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */,
+				8D506A4629DAA3B400C42C91 /* TapBarControllerComponent.swift in Sources */,
 				8D506A4129DA95AB00C42C91 /* MenuScreenComponent.swift in Sources */,
 				8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */,
 				8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */,
