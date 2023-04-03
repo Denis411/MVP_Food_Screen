@@ -5,7 +5,7 @@ final class MenuTableViewCell: UITableViewCell {
     private let dishImageView = UIImageView()
     private let dishNameTitle = UILabel()
     private let dishDescriptionTitle = UILabel()
-    private let orderButton = UIButton()
+    private let orderButton = MenuTableViewCellButton()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,7 +21,6 @@ final class MenuTableViewCell: UITableViewCell {
         self.dishNameTitle.text = info.name
         self.dishDescriptionTitle.text = info.description
         self.orderButton.setTitle(info.buttonText, for: .normal)
-        self.orderButton.backgroundColor = .gray
     }
 }
 
@@ -70,7 +69,7 @@ extension MenuTableViewCell {
             make.top.equalTo(dishDescriptionTitle.snp.bottom).offset(20)
             make.right.bottom.equalToSuperview()
             make.height.equalTo(50)
-            make.width.equalTo(100)
+            make.width.equalTo(100).priority(.low)
         }
     }
 }
