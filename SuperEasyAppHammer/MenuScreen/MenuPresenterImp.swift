@@ -2,12 +2,15 @@ import Foundation
 
 protocol MenuViewControllerProtocol: AnyObject {
     func setDishCellInfo(cellInfo: [MenuDishTableViewCellInfo])
+    func setDishTypeCellInfo(cellInfo: [DishTypeCellInfo])
 }
 
 // MARK: - MenuPresenterImp -
 
 final class MenuPresenterImp {
     private weak var view: MenuViewControllerProtocol?
+    private let availableTypesOfDishes = DishType.allCases
+    private var dishTypeCellInfo: [DishTypeCellInfo] = []
 }
 
 extension MenuPresenterImp: MenuPresenterSettingView {
@@ -17,12 +20,24 @@ extension MenuPresenterImp: MenuPresenterSettingView {
 }
 
 extension MenuPresenterImp: MenuPresenterFunctionality {
-    func loadDishesCellInfo() {
-        //        networking loading cellInfo
-        let cellInfo = Array(repeating: 1, count: 10).map { _ in
-            return MenuDishTableViewCellInfo.getMockData()
+/// Sets initial data
+    func loadView() {
+//      set default dish types where pizza is selected
+        for dishType in availableTypesOfDishes {
+            let isSelected = (dishType == .pizza) ? true : false
+            let info = DishTypeCellInfo(dishType: dishType, isSelected: isSelected)
+            dishTypeCellInfo.append(info)
         }
-        
-        view?.setDishCellInfo(cellInfo: cellInfo)
+
+        view?.setDishTypeCellInfo(cellInfo: dishTypeCellInfo)
+        let fakeDishCellInfo = Array(repeating: 1, count: 10).map { _ in
+            MenuDishTableViewCellInfo.getMockData()
+        }
+
+        view?.setDishCellInfo(cellInfo: fakeDishCellInfo)
+    }
+
+    func loadDishesCellInfo(for dishType: DishType?) {
+
     }
 }

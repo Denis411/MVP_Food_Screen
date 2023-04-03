@@ -23,6 +23,9 @@
 		8D506A4F29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4E29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift */; };
 		8D506A5129DAC1CC00C42C91 /* MenuTableViewCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5029DAC1CC00C42C91 /* MenuTableViewCellButton.swift */; };
 		8D506A5329DAD71B00C42C91 /* MenuPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5229DAD71B00C42C91 /* MenuPresenterImp.swift */; };
+		8D506A5529DADE8300C42C91 /* DishTypeScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5429DADE8300C42C91 /* DishTypeScrollableView.swift */; };
+		8D506A5929DAE72900C42C91 /* DishType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5829DAE72900C42C91 /* DishType.swift */; };
+		8D506A5B29DAE7C200C42C91 /* DishTypeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5A29DAE7C200C42C91 /* DishTypeCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		8D506A4E29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDishTableViewCellInfo.swift; sourceTree = "<group>"; };
 		8D506A5029DAC1CC00C42C91 /* MenuTableViewCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCellButton.swift; sourceTree = "<group>"; };
 		8D506A5229DAD71B00C42C91 /* MenuPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterImp.swift; sourceTree = "<group>"; };
+		8D506A5429DADE8300C42C91 /* DishTypeScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTypeScrollableView.swift; sourceTree = "<group>"; };
+		8D506A5829DAE72900C42C91 /* DishType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishType.swift; sourceTree = "<group>"; };
+		8D506A5A29DAE7C200C42C91 /* DishTypeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTypeCellView.swift; sourceTree = "<group>"; };
 		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,11 +149,30 @@
 		8D506A4829DAB51800C42C91 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8D506A5729DAE70900C42C91 /* DishTypeView */,
+				8D506A5629DAE6ED00C42C91 /* TableView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8D506A5629DAE6ED00C42C91 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
 				8D506A4A29DAB56400C42C91 /* MenuTableView.swift */,
 				8D506A4C29DABEA600C42C91 /* MenuTableViewCell.swift */,
 				8D506A5029DAC1CC00C42C91 /* MenuTableViewCellButton.swift */,
 			);
-			path = CustomViews;
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		8D506A5729DAE70900C42C91 /* DishTypeView */ = {
+			isa = PBXGroup;
+			children = (
+				8D506A5429DADE8300C42C91 /* DishTypeScrollableView.swift */,
+				8D506A5829DAE72900C42C91 /* DishType.swift */,
+				8D506A5A29DAE7C200C42C91 /* DishTypeCellView.swift */,
+			);
+			path = DishTypeView;
 			sourceTree = "<group>";
 		};
 		B8EEA826348D5CCD89C3F4C7 /* Frameworks */ = {
@@ -294,13 +319,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */,
+				8D506A5929DAE72900C42C91 /* DishType.swift in Sources */,
 				8D506A4429DAA2FB00C42C91 /* TapBarController.swift in Sources */,
 				8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */,
 				8D506A4F29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift in Sources */,
 				8D506A4629DAA3B400C42C91 /* TapBarControllerComponent.swift in Sources */,
+				8D506A5B29DAE7C200C42C91 /* DishTypeCellView.swift in Sources */,
 				8D506A4D29DABEA600C42C91 /* MenuTableViewCell.swift in Sources */,
 				8D506A4B29DAB56400C42C91 /* MenuTableView.swift in Sources */,
 				8D506A4129DA95AB00C42C91 /* MenuScreenComponent.swift in Sources */,
+				8D506A5529DADE8300C42C91 /* DishTypeScrollableView.swift in Sources */,
 				8D506A5329DAD71B00C42C91 /* MenuPresenterImp.swift in Sources */,
 				8D506A5129DAC1CC00C42C91 /* MenuTableViewCellButton.swift in Sources */,
 				8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */,

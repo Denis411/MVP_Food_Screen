@@ -11,7 +11,8 @@ import SnapKit
 typealias MenuPresenter = MenuPresenterFunctionality & MenuPresenterSettingView
 
 protocol MenuPresenterFunctionality: AnyObject {
-    func loadDishesCellInfo()
+    func loadView()
+    func loadDishesCellInfo(for dishType: DishType?)
 }
 
 protocol MenuPresenterSettingView {
@@ -22,6 +23,7 @@ protocol MenuPresenterSettingView {
 
 class MenuViewController: UIViewController {
     private let presenter: MenuPresenter
+    private let dishTypeView = DishTypeScrollableView()
     private let tableView = MenuTableView()
 
     init(presenter: MenuPresenter) {
@@ -35,20 +37,47 @@ class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        dishTypeView.dishTypeDelegate = self
+        addDishTypeView()
+        addTableView()
+    }
+
+    private func addDishTypeView() {
+        view.addSubview(dishTypeView)
+        dishTypeView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(70)
+        }
+    }
+
+    private func addTableView() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(dishTypeView.snp.bottom)
+            make.left.right.bottom.equalToSuperview()
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.loadDishesCellInfo()
+        presenter.loadView()
     }
 }
 
 extension MenuViewController: MenuViewControllerProtocol {
     func setDishCellInfo(cellInfo: [MenuDishTableViewCellInfo]) {
         tableView.setCellInfo(cellInfo)
+    }
+
+    /// Setts available types of dishs
+    func setDishTypeCellInfo(cellInfo: [DishTypeCellInfo]) {
+        dishTypeView.setDishTypeCellInfo(cellInfo)
+    }
+}
+
+extension MenuViewController: DishTypeCellViewDelegate {
+    func didChangeDishType(dishType: DishType?) {
+        presenter.loadDishesCellInfo(for: dishType)
     }
 }
