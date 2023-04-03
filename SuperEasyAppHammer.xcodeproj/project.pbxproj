@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383EE6B39C0B9724539B386A /* Pods_SuperEasyAppHammer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */; };
 		8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2429DA8DA300C42C91 /* AppDelegate.swift */; };
 		8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */; };
 		8D506A2929DA8DA300C42C91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2829DA8DA300C42C91 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.release.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.release.xcconfig"; sourceTree = "<group>"; };
+		4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperEasyAppHammer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D506A2129DA8DA300C42C91 /* SuperEasyAppHammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperEasyAppHammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D506A2429DA8DA300C42C91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8D506A2D29DA8DA600C42C91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D506A3029DA8DA600C42C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D506A3229DA8DA600C42C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383EE6B39C0B9724539B386A /* Pods_SuperEasyAppHammer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E8C6EBD9E0ACDB9CB04E536 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */,
+				14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8D506A1829DA8DA300C42C91 = {
 			isa = PBXGroup;
 			children = (
 				8D506A2329DA8DA300C42C91 /* SuperEasyAppHammer */,
 				8D506A2229DA8DA300C42C91 /* Products */,
+				4E8C6EBD9E0ACDB9CB04E536 /* Pods */,
+				B8EEA826348D5CCD89C3F4C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = SuperEasyAppHammer;
 			sourceTree = "<group>";
 		};
+		B8EEA826348D5CCD89C3F4C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D506A3529DA8DA600C42C91 /* Build configuration list for PBXNativeTarget "SuperEasyAppHammer" */;
 			buildPhases = (
+				CC6712184C4FF7D862A1E722 /* [CP] Check Pods Manifest.lock */,
 				8D506A1D29DA8DA300C42C91 /* Sources */,
 				8D506A1E29DA8DA300C42C91 /* Frameworks */,
 				8D506A1F29DA8DA300C42C91 /* Resources */,
+				DE227F6CAFBFF48C5C7F64DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CC6712184C4FF7D862A1E722 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuperEasyAppHammer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE227F6CAFBFF48C5C7F64DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D506A1D29DA8DA300C42C91 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8D506A3629DA8DA600C42C91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		8D506A3729DA8DA600C42C91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
