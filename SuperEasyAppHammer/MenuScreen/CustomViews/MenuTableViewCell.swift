@@ -24,9 +24,10 @@ final class MenuTableViewCell: UITableViewCell {
     }
 }
 
-// MARK: - Set up UI
+// MARK: - Set up constraints -
 extension MenuTableViewCell {
     private func setUI() {
+        setUpAllSubviews()
         addAllSubviews()
         addDishImageViewConstraints()
         addDishNameTitleConstraints()
@@ -71,5 +72,15 @@ extension MenuTableViewCell {
             make.height.equalTo(50)
             make.width.equalTo(100).priority(.low)
         }
+    }
+}
+
+// MARK: - Set up subviews -
+extension MenuTableViewCell {
+    private func setUpAllSubviews() {
+        dishNameTitle.font = .systemFont(ofSize: 20)
+        dishNameTitle.textColor = .black
+        dishDescriptionTitle.font = .systemFont(ofSize: 15)
+        dishDescriptionTitle.textColor = .gray
     }
 }
