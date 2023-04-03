@@ -14,6 +14,8 @@
 		8D506A2E29DA8DA600C42C91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D506A2D29DA8DA600C42C91 /* Assets.xcassets */; };
 		8D506A3129DA8DA600C42C91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D506A2F29DA8DA600C42C91 /* LaunchScreen.storyboard */; };
 		8D506A3D29DA919000C42C91 /* Needle.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A3C29DA919000C42C91 /* Needle.generated.swift */; };
+		8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A3E29DA928100C42C91 /* RootComponent.swift */; };
+		8D506A4129DA95AB00C42C91 /* MainScreenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4029DA95AB00C42C91 /* MainScreenComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		8D506A3029DA8DA600C42C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D506A3229DA8DA600C42C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D506A3C29DA919000C42C91 /* Needle.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Needle.generated.swift; sourceTree = "<group>"; };
+		8D506A3E29DA928100C42C91 /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		8D506A4029DA95AB00C42C91 /* MainScreenComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenComponent.swift; sourceTree = "<group>"; };
 		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,7 @@
 		8D506A2329DA8DA300C42C91 /* SuperEasyAppHammer */ = {
 			isa = PBXGroup;
 			children = (
+				8D506A3E29DA928100C42C91 /* RootComponent.swift */,
 				8D506A3A29DA905500C42C91 /* Generated */,
 				8D506A3929DA900E00C42C91 /* Standard */,
 				8D506A3829DA8FFD00C42C91 /* MainScreen */,
@@ -85,6 +90,7 @@
 		8D506A3829DA8FFD00C42C91 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8D506A4029DA95AB00C42C91 /* MainScreenComponent.swift */,
 				8D506A2829DA8DA300C42C91 /* ViewController.swift */,
 			);
 			path = MainScreen;
@@ -252,7 +258,9 @@
 			files = (
 				8D506A2929DA8DA300C42C91 /* ViewController.swift in Sources */,
 				8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */,
+				8D506A4129DA95AB00C42C91 /* MainScreenComponent.swift in Sources */,
 				8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */,
+				8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */,
 				8D506A3D29DA919000C42C91 /* Needle.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

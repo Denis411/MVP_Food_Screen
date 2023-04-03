@@ -9,12 +9,14 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    static let rootComponent = RootComponent()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
+        registerProviderFactories()
         window = UIWindow(windowScene: scene)
-        let initialVC = ViewController()
-        window?.rootViewController = initialVC
+        let sharedNavController = SceneDelegate.rootComponent.navigationController
+        window?.rootViewController = sharedNavController
         window?.makeKeyAndVisible()
     }
 }
