@@ -22,6 +22,7 @@
 		8D506A4D29DABEA600C42C91 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4C29DABEA600C42C91 /* MenuTableViewCell.swift */; };
 		8D506A4F29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A4E29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift */; };
 		8D506A5129DAC1CC00C42C91 /* MenuTableViewCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5029DAC1CC00C42C91 /* MenuTableViewCellButton.swift */; };
+		8D506A5329DAD71B00C42C91 /* MenuPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5229DAD71B00C42C91 /* MenuPresenterImp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		8D506A4C29DABEA600C42C91 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		8D506A4E29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDishTableViewCellInfo.swift; sourceTree = "<group>"; };
 		8D506A5029DAC1CC00C42C91 /* MenuTableViewCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCellButton.swift; sourceTree = "<group>"; };
+		8D506A5229DAD71B00C42C91 /* MenuPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterImp.swift; sourceTree = "<group>"; };
 		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				8D506A4829DAB51800C42C91 /* CustomViews */,
 				8D506A4029DA95AB00C42C91 /* MenuScreenComponent.swift */,
 				8D506A2829DA8DA300C42C91 /* MenuViewController.swift */,
+				8D506A5229DAD71B00C42C91 /* MenuPresenterImp.swift */,
 			);
 			path = MenuScreen;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				8D506A4D29DABEA600C42C91 /* MenuTableViewCell.swift in Sources */,
 				8D506A4B29DAB56400C42C91 /* MenuTableView.swift in Sources */,
 				8D506A4129DA95AB00C42C91 /* MenuScreenComponent.swift in Sources */,
+				8D506A5329DAD71B00C42C91 /* MenuPresenterImp.swift in Sources */,
 				8D506A5129DAC1CC00C42C91 /* MenuTableViewCellButton.swift in Sources */,
 				8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */,
 				8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */,

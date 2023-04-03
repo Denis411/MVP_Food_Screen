@@ -42,7 +42,6 @@ extension MenuTableView: UITableViewDelegate, UITableViewDataSource {
         ) as! MenuTableViewCell
 
         let cellInfo = dishCellInfo[indexPath.row]
-
         cell.setCellInfo(cellInfo)
 
         return cell

@@ -9,7 +9,14 @@ import NeedleFoundation
 
 final class MenuScreenComponent: EmptyDependency {
     private var mainViewController: UIViewController {
-        MenuViewController()
+        let presenter = presenter
+        let menuViewController = MenuViewController(presenter: presenter)
+        presenter.setView(menuViewController)
+        return menuViewController
+    }
+
+    private var presenter: MenuPresenter {
+        MenuPresenterImp()
     }
 }
 
