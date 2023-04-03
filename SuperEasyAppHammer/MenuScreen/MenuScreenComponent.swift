@@ -7,13 +7,13 @@
 
 import NeedleFoundation
 
-final class MainScreenComponent: EmptyDependency {
+final class MenuScreenComponent: EmptyDependency {
     private var mainViewController: UIViewController {
-        ViewController()
+        MenuViewController()
     }
 }
 
-extension MainScreenComponent {
+extension MenuScreenComponent {
     func getMainViewController() -> UIViewController {
         self.mainViewController
     }

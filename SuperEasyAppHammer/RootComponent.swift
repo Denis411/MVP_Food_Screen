@@ -10,7 +10,7 @@ final class RootComponent: BootstrapComponent {
             let navigationController = UINavigationController(rootViewController: rootViewController)
             navigationController.isNavigationBarHidden = true
             navigationController.isToolbarHidden = true
-            let startingVC = self.mainScreenComponent.getMainViewController()
+            let startingVC = self.menuScreenComponent.getMainViewController()
             navigationController.pushViewController(
                 startingVC , animated: false
             )
@@ -18,5 +18,5 @@ final class RootComponent: BootstrapComponent {
         }
     }
 
-    var mainScreenComponent: MainScreenComponent { MainScreenComponent() }
+    var menuScreenComponent: MenuScreenComponent { MenuScreenComponent() }
 }
