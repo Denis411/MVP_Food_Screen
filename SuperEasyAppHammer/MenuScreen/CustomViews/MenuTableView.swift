@@ -11,6 +11,11 @@ final class MenuTableView: UITableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    func setCellInfo(_ cellInfo: [MenuDishTableViewCellInfo]) {
+        self.dishCellInfo = cellInfo
+        self.reloadData()
+    }
 }
 
 extension MenuTableView {
@@ -27,7 +32,7 @@ extension MenuTableView {
 
 extension MenuTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        dishCellInfo.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,8 +41,9 @@ extension MenuTableView: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as! MenuTableViewCell
 
-        let mock = MenuDishTableViewCellInfo.getMockData()
-        cell.setCellInfo(mock)
+        let cellInfo = dishCellInfo[indexPath.row]
+
+        cell.setCellInfo(cellInfo)
 
         return cell
     }
