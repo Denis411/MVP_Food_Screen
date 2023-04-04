@@ -92,7 +92,6 @@
 			children = (
 				8D142F4629DBDE76008DEB68 /* AdvertisementCollectionView.swift */,
 				8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */,
-				8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */,
 			);
 			path = AdvertisementView;
 			sourceTree = "<group>";
@@ -133,11 +132,12 @@
 		8D506A3829DA8FFD00C42C91 /* MenuScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8DE1B51529DC3520005D25E2 /* UseCases */,
-				8D506A4E29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift */,
-				8D506A4829DAB51800C42C91 /* CustomViews */,
 				8D506A4029DA95AB00C42C91 /* MenuScreenComponent.swift */,
+				8DE1B51A29DC3915005D25E2 /* Models */,
+				8DE1B51529DC3520005D25E2 /* UseCases */,
+				8D506A4829DAB51800C42C91 /* CustomViews */,
 				8D506A2829DA8DA300C42C91 /* MenuViewController.swift */,
+				8DE1B51329DC1F7F005D25E2 /* MenuScreenView.swift */,
 				8D506A5229DAD71B00C42C91 /* MenuPresenterImp.swift */,
 			);
 			path = MenuScreen;
@@ -172,7 +172,6 @@
 		8D506A4829DAB51800C42C91 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				8DE1B51329DC1F7F005D25E2 /* MenuScreenView.swift */,
 				8D142F4529DBDE30008DEB68 /* AdvertisementView */,
 				8D506A5729DAE70900C42C91 /* DishTypeView */,
 				8D506A5629DAE6ED00C42C91 /* TableView */,
@@ -194,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				8D506A5429DADE8300C42C91 /* DishTypeScrollableView.swift */,
-				8D506A5829DAE72900C42C91 /* DishType.swift */,
 				8D506A5A29DAE7C200C42C91 /* DishTypeCellView.swift */,
 			);
 			path = DishTypeView;
@@ -207,6 +205,16 @@
 				8DE1B51829DC373F005D25E2 /* MenuAdvertisementPicLoaderImp.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		8DE1B51A29DC3915005D25E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D506A4E29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift */,
+				8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */,
+				8D506A5829DAE72900C42C91 /* DishType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B8EEA826348D5CCD89C3F4C7 /* Frameworks */ = {
