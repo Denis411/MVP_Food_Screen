@@ -13,6 +13,10 @@ protocol MenuDishLoader {
     func loadDishes(type: DishType, for city: String, completionHandler: @escaping (Result<[MenuDishTableViewCellInfo], Error>) -> Void)
 }
 
+protocol MenuAdvertisementPicLoader {
+    func loadPics(completionHandler: @escaping (Result<[UIImage], Error>) -> Void)
+}
+
 // MARK: - MenuPresenterImp -
 final class MenuPresenterImp {
     private weak var view: MenuViewControllerProtocol?
@@ -21,6 +25,7 @@ final class MenuPresenterImp {
 
 //  use cases
     private let menuDishLoader: MenuDishLoader = MenuDishLoaderImp()
+    private let advertisementPicLoader: MenuAdvertisementPicLoader = MenuAdvertisementPicLoaderImp()
 }
 
 extension MenuPresenterImp: MenuPresenterSettingView {
@@ -73,14 +78,14 @@ extension MenuPresenterImp {
     }
 
     private func loadAdvertisementImages() {
-//        load images from the internet
-        var listOfFakeCellInfo: [MenuAdvertisementCellInfo] = []
-        for _ in 0..<50 {
-            let mockImage = UIImage(systemName: "pencil")!
-            let cellInfo = MenuAdvertisementCellInfo(image: mockImage)
-            listOfFakeCellInfo.append(cellInfo)
+        advertisementPicLoader.loadPics { [weak self] result in
+            switch result {
+            case .success(let listOfImages):
+                let advertisementCellInfo = listOfImages.map { MenuAdvertisementCellInfo(image: $0) }
+                self?.view?.setAdvertisementInfo(cellInfo: advertisementCellInfo)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
-
-        view?.setAdvertisementInfo(cellInfo: listOfFakeCellInfo)
     }
 }
