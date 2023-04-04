@@ -1,6 +1,8 @@
 import UIKit
 
-final class AdvertisementCollectionViewView: UICollectionView {
+final class AdvertisementCollectionView: UICollectionView {
+    private let CELL_WIDTH = UIScreen.main.bounds.width * 0.80
+    private let CELL_HEIGHT = UIScreen.main.bounds.width * 0.25
     private var listOfAdvertisementCellInfo: [MenuAdvertisementCellInfo] = [] {
         didSet {
             self.reloadData()
@@ -8,7 +10,9 @@ final class AdvertisementCollectionViewView: UICollectionView {
     }
 
     init() {
-        super.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        super.init(frame: .zero, collectionViewLayout: layout)
         setSelf()
     }
 
@@ -22,7 +26,7 @@ final class AdvertisementCollectionViewView: UICollectionView {
 }
 
 // MARK: - Set self -
-extension AdvertisementCollectionViewView {
+extension AdvertisementCollectionView {
     private func setSelf() {
         self.delegate = self
         self.dataSource = self
@@ -31,7 +35,7 @@ extension AdvertisementCollectionViewView {
     }
 }
 
-extension AdvertisementCollectionViewView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension AdvertisementCollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         listOfAdvertisementCellInfo.count
     }
@@ -42,5 +46,14 @@ extension AdvertisementCollectionViewView: UICollectionViewDelegate, UICollectio
         cell.setCell(with: listOfAdvertisementCellInfo[indexPath.item])
 
         return cell
+    }
+}
+
+extension AdvertisementCollectionView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(
+            width: CELL_WIDTH,
+            height: CELL_HEIGHT
+        )
     }
 }

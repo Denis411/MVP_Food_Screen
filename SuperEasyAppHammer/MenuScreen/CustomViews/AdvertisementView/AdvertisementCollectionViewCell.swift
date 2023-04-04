@@ -23,6 +23,9 @@ final class AdvertisementCollectionViewCell: UICollectionViewCell {
 extension AdvertisementCollectionViewCell {
     private func setImageView() {
         imageView.layer.cornerRadius = 7
+        imageView.contentMode = .scaleToFill
+        imageView.clipsToBounds = true
+
         imageView.backgroundColor = .green
         contentView.addSubview(imageView)
         imageView.snp.makeConstraints { make in

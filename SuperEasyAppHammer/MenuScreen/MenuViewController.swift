@@ -16,7 +16,7 @@ protocol MenuPresenterSettingView {
 
 class MenuViewController: UIViewController {
     private let presenter: MenuPresenter
-    private let advertisementCollectionView = AdvertisementCollectionViewView()
+    private let advertisementCollectionView = AdvertisementCollectionView()
     private let dishTypeView = DishTypeScrollableView()
     private let tableView = MenuTableView()
 
