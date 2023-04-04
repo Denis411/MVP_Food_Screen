@@ -70,13 +70,17 @@ class MenuViewController: UIViewController {
 }
 
 extension MenuViewController: MenuViewControllerProtocol {
-    func setDishCellInfo(cellInfo: [MenuDishTableViewCellInfo]) {
-        tableView.setCellInfo(cellInfo)
+    func setAdvertisementInfo(cellInfo: [MenuAdvertisementCellInfo]) {
+        advertisementCollectionView.setAdvertisementInfo(cellInfo)
     }
 
     /// Sets available types of dishes
     func setDishTypeCellInfo(cellInfo: [DishTypeCellInfo]) {
         dishTypeView.setDishTypeCellInfo(cellInfo)
+    }
+
+    func setDishCellInfo(cellInfo: [MenuDishTableViewCellInfo]) {
+        tableView.setCellInfo(cellInfo)
     }
 }
 

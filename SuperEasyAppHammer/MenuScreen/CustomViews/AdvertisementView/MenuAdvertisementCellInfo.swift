@@ -1,5 +1,5 @@
 import UIKit
 
 struct MenuAdvertisementCellInfo {
-    private let image: UIImage
+    let image: UIImage
 }

@@ -1,8 +1,10 @@
 import Foundation
+import UIKit
 
 protocol MenuViewControllerProtocol: AnyObject {
     func setDishCellInfo(cellInfo: [MenuDishTableViewCellInfo])
     func setDishTypeCellInfo(cellInfo: [DishTypeCellInfo])
+    func setAdvertisementInfo(cellInfo: [MenuAdvertisementCellInfo])
 }
 
 // MARK: - MenuPresenterImp -
@@ -34,6 +36,7 @@ extension MenuPresenterImp: MenuPresenterFunctionality {
         }
 
         view?.setDishCellInfo(cellInfo: fakeDishCellInfo)
+        loadAdvertisementImages()
     }
 
     func loadDishesCellInfo(for dishType: DishType?) {
@@ -60,5 +63,19 @@ extension MenuPresenterImp: MenuPresenterFunctionality {
         view?.setDishCellInfo(cellInfo: fakeDishCellInfo)
 
 
+    }
+}
+
+extension MenuPresenterImp {
+    private func loadAdvertisementImages() {
+//        load images from the internet
+        var listOfFakeCellInfo: [MenuAdvertisementCellInfo] = []
+        for _ in 0..<50 {
+            let mockImage = UIImage(systemName: "pencil")!
+            let cellInfo = MenuAdvertisementCellInfo(image: mockImage)
+            listOfFakeCellInfo.append(cellInfo)
+        }
+
+        view?.setAdvertisementInfo(cellInfo: listOfFakeCellInfo)
     }
 }
