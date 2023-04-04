@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		383EE6B39C0B9724539B386A /* Pods_SuperEasyAppHammer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */; };
+		8D142F4729DBDE76008DEB68 /* AdvertisementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4629DBDE76008DEB68 /* AdvertisementView.swift */; };
 		8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2429DA8DA300C42C91 /* AppDelegate.swift */; };
 		8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */; };
 		8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2829DA8DA300C42C91 /* MenuViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.release.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.release.xcconfig"; sourceTree = "<group>"; };
 		4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperEasyAppHammer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D142F4629DBDE76008DEB68 /* AdvertisementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementView.swift; sourceTree = "<group>"; };
 		8D506A2129DA8DA300C42C91 /* SuperEasyAppHammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperEasyAppHammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D506A2429DA8DA300C42C91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 				14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D142F4529DBDE30008DEB68 /* AdvertisementView */ = {
+			isa = PBXGroup;
+			children = (
+				8D142F4629DBDE76008DEB68 /* AdvertisementView.swift */,
+			);
+			path = AdvertisementView;
 			sourceTree = "<group>";
 		};
 		8D506A1829DA8DA300C42C91 = {
@@ -149,6 +159,7 @@
 		8D506A4829DAB51800C42C91 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8D142F4529DBDE30008DEB68 /* AdvertisementView */,
 				8D506A5729DAE70900C42C91 /* DishTypeView */,
 				8D506A5629DAE6ED00C42C91 /* TableView */,
 			);
@@ -330,6 +341,7 @@
 				8D506A4129DA95AB00C42C91 /* MenuScreenComponent.swift in Sources */,
 				8D506A5529DADE8300C42C91 /* DishTypeScrollableView.swift in Sources */,
 				8D506A5329DAD71B00C42C91 /* MenuPresenterImp.swift in Sources */,
+				8D142F4729DBDE76008DEB68 /* AdvertisementView.swift in Sources */,
 				8D506A5129DAC1CC00C42C91 /* MenuTableViewCellButton.swift in Sources */,
 				8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */,
 				8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */,
