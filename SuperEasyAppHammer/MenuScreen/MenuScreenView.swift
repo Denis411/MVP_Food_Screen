@@ -2,6 +2,8 @@ import UIKit
 
 final class MenuScreenView: UIView {
     private let advertisementCollectionView = AdvertisementCollectionView()
+    private var ADVERTISEMENT_INITIAL_HEIGHT: CGFloat = 100.0
+    private var heightAdvertisementConstraint: NSLayoutConstraint? = nil
     private let dishTypeView = DishTypeScrollableView()
     private let tableView = MenuTableView()
 
@@ -10,6 +12,7 @@ final class MenuScreenView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
+        setDidScrollAction()
     }
 
     required init?(coder: NSCoder) {
@@ -31,6 +34,24 @@ final class MenuScreenView: UIView {
 
     func setDidChangeDishTypeAction(_ action: @escaping (DishType?) -> Void) {
         self.didChangeDishTypeAction = action
+    }
+}
+
+// MARK: - Logic on hiding advertisement scrollView -
+extension MenuScreenView {
+    private func setDidScrollAction() {
+        tableView.setDidScrollAction { [weak self] verticalOffset in
+            print(verticalOffset)
+            guard let initialHeight = self?.ADVERTISEMENT_INITIAL_HEIGHT else {
+                return
+            }
+
+            if verticalOffset > 0 {
+                self?.setNeedsLayout()
+                self?.heightAdvertisementConstraint?.constant = initialHeight - verticalOffset
+                self?.layoutIfNeeded()
+            }
+        }
     }
 }
 
@@ -57,10 +78,12 @@ extension MenuScreenView {
 
     private func addAdvertisementCollection() {
         advertisementCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(self.snp.top)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.left.right.equalToSuperview()
-            make.height.equalTo(100)
         }
+
+        heightAdvertisementConstraint = advertisementCollectionView.heightAnchor.constraint(equalToConstant: ADVERTISEMENT_INITIAL_HEIGHT)
+        heightAdvertisementConstraint?.isActive = true
     }
 
     private func addDishTypeView() {

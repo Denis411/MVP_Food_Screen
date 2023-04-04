@@ -2,6 +2,7 @@ import UIKit
 
 final class MenuTableView: UITableView {
     private var dishCellInfo: [MenuDishTableViewCellInfo] = []
+    private var didScrollAction: ((CGFloat) -> Void)?
 
     init() {
         super.init(frame: .zero, style: .plain)
@@ -15,6 +16,10 @@ final class MenuTableView: UITableView {
     func setCellInfo(_ cellInfo: [MenuDishTableViewCellInfo]) {
         self.dishCellInfo = cellInfo
         self.reloadData()
+    }
+
+    func setDidScrollAction(action: @escaping (CGFloat) -> Void) {
+        self.didScrollAction = action
     }
 }
 
@@ -45,5 +50,9 @@ extension MenuTableView: UITableViewDelegate, UITableViewDataSource {
         cell.setCellInfo(cellInfo)
 
         return cell
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        didScrollAction?(scrollView.contentOffset.y)
     }
 }
