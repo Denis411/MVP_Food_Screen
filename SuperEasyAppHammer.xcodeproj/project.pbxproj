@@ -29,6 +29,7 @@
 		8D506A5529DADE8300C42C91 /* DishTypeScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5429DADE8300C42C91 /* DishTypeScrollableView.swift */; };
 		8D506A5929DAE72900C42C91 /* DishType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5829DAE72900C42C91 /* DishType.swift */; };
 		8D506A5B29DAE7C200C42C91 /* DishTypeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A5A29DAE7C200C42C91 /* DishTypeCellView.swift */; };
+		8DE1B51429DC1F7F005D25E2 /* MenuScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE1B51329DC1F7F005D25E2 /* MenuScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		8D506A5429DADE8300C42C91 /* DishTypeScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTypeScrollableView.swift; sourceTree = "<group>"; };
 		8D506A5829DAE72900C42C91 /* DishType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishType.swift; sourceTree = "<group>"; };
 		8D506A5A29DAE7C200C42C91 /* DishTypeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTypeCellView.swift; sourceTree = "<group>"; };
+		8DE1B51329DC1F7F005D25E2 /* MenuScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenView.swift; sourceTree = "<group>"; };
 		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 		8D506A4829DAB51800C42C91 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8DE1B51329DC1F7F005D25E2 /* MenuScreenView.swift */,
 				8D142F4529DBDE30008DEB68 /* AdvertisementView */,
 				8D506A5729DAE70900C42C91 /* DishTypeView */,
 				8D506A5629DAE6ED00C42C91 /* TableView */,
@@ -338,6 +341,7 @@
 				8D142F4929DBE251008DEB68 /* AdvertisementCollectionViewCell.swift in Sources */,
 				8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */,
 				8D506A5929DAE72900C42C91 /* DishType.swift in Sources */,
+				8DE1B51429DC1F7F005D25E2 /* MenuScreenView.swift in Sources */,
 				8D506A4429DAA2FB00C42C91 /* TapBarController.swift in Sources */,
 				8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */,
 				8D506A4F29DABECE00C42C91 /* MenuDishTableViewCellInfo.swift in Sources */,
