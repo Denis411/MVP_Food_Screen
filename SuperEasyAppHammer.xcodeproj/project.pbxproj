@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		383EE6B39C0B9724539B386A /* Pods_SuperEasyAppHammer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */; };
 		8D142F4729DBDE76008DEB68 /* AdvertisementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4629DBDE76008DEB68 /* AdvertisementView.swift */; };
+		8D142F4929DBE251008DEB68 /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */; };
+		8D142F4B29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */; };
 		8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2429DA8DA300C42C91 /* AppDelegate.swift */; };
 		8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */; };
 		8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2829DA8DA300C42C91 /* MenuViewController.swift */; };
@@ -33,6 +35,8 @@
 		14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.release.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.release.xcconfig"; sourceTree = "<group>"; };
 		4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperEasyAppHammer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D142F4629DBDE76008DEB68 /* AdvertisementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementView.swift; sourceTree = "<group>"; };
+		8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
+		8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAdvertisementCellInfo.swift; sourceTree = "<group>"; };
 		8D506A2129DA8DA300C42C91 /* SuperEasyAppHammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperEasyAppHammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D506A2429DA8DA300C42C91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				8D142F4629DBDE76008DEB68 /* AdvertisementView.swift */,
+				8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */,
+				8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */,
 			);
 			path = AdvertisementView;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D142F4929DBE251008DEB68 /* AdvertisementCollectionViewCell.swift in Sources */,
 				8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */,
 				8D506A5929DAE72900C42C91 /* DishType.swift in Sources */,
 				8D506A4429DAA2FB00C42C91 /* TapBarController.swift in Sources */,
@@ -344,6 +351,7 @@
 				8D142F4729DBDE76008DEB68 /* AdvertisementView.swift in Sources */,
 				8D506A5129DAC1CC00C42C91 /* MenuTableViewCellButton.swift in Sources */,
 				8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */,
+				8D142F4B29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift in Sources */,
 				8D506A3F29DA928100C42C91 /* RootComponent.swift in Sources */,
 				8D506A3D29DA919000C42C91 /* Needle.generated.swift in Sources */,
 			);

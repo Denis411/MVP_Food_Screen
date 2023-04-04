@@ -16,6 +16,7 @@ protocol MenuPresenterSettingView {
 
 class MenuViewController: UIViewController {
     private let presenter: MenuPresenter
+    private let advertisementCollectionView = AdvertisementCollectionViewView()
     private let dishTypeView = DishTypeScrollableView()
     private let tableView = MenuTableView()
 
@@ -31,14 +32,24 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dishTypeView.dishTypeDelegate = self
+        addAdvertisementCollection()
         addDishTypeView()
         addTableView()
+    }
+
+    private func addAdvertisementCollection() {
+        view.addSubview(advertisementCollectionView)
+        advertisementCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(100)
+        }
     }
 
     private func addDishTypeView() {
         view.addSubview(dishTypeView)
         dishTypeView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.top.equalTo(advertisementCollectionView.snp.bottom)
             make.left.right.equalToSuperview()
             make.height.equalTo(70)
         }
