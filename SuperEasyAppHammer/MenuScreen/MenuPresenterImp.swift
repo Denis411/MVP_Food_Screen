@@ -1,10 +1,16 @@
 import Foundation
 import UIKit
 
+// MARK: - ViewController protocol -
 protocol MenuViewControllerProtocol: AnyObject {
     func setDishCellInfo(cellInfo: [MenuDishTableViewCellInfo])
     func setDishTypeCellInfo(cellInfo: [DishTypeCellInfo])
     func setAdvertisementInfo(cellInfo: [MenuAdvertisementCellInfo])
+}
+
+// MARK: - Use cases -
+protocol MenuDishLoader {
+    func loadDishes(type: DishType, for city: String, completionHandler: @escaping (Result<[MenuDishTableViewCellInfo], Error>) -> Void)
 }
 
 // MARK: - MenuPresenterImp -
@@ -12,6 +18,9 @@ final class MenuPresenterImp {
     private weak var view: MenuViewControllerProtocol?
     private let availableTypesOfDishes = DishType.allCases
     private var dishTypeCellInfo: [DishTypeCellInfo] = []
+
+//  use cases
+    private let menuDishLoader: MenuDishLoader = MenuDishLoaderImp()
 }
 
 extension MenuPresenterImp: MenuPresenterSettingView {
@@ -31,11 +40,7 @@ extension MenuPresenterImp: MenuPresenterFunctionality {
         }
 
         view?.setDishTypeCellInfo(cellInfo: dishTypeCellInfo)
-        let fakeDishCellInfo = Array(repeating: 1, count: 10).map { _ in
-            MenuDishTableViewCellInfo.getMockData()
-        }
-
-        view?.setDishCellInfo(cellInfo: fakeDishCellInfo)
+        loadDishes(for: .pizza, in: "")
         loadAdvertisementImages()
     }
 
@@ -50,23 +55,23 @@ extension MenuPresenterImp: MenuPresenterFunctionality {
 
         view?.setDishTypeCellInfo(cellInfo: dishTypeCellInfo)
 
-//      load dish cell info from the internet for a given type
-
-        let fakeDishCellInfo = Array(repeating: 1, count: 10).map { _ in
-            MenuDishTableViewCellInfo(
-                image: nil,
-                name: String(Int.random(in: 0...200000)),
-                description: "Random",
-                buttonText: "Random"
-            )        }
-
-        view?.setDishCellInfo(cellInfo: fakeDishCellInfo)
-
-
+        loadDishes(for: .beverage, in: "")
     }
 }
 
 extension MenuPresenterImp {
+    private func loadDishes(for type: DishType, in city: String) {
+        menuDishLoader.loadDishes(type: type, for: city) { [weak self] result in
+            switch result {
+            case .success(let listOfDishes):
+                self?.view?.setDishCellInfo(cellInfo: listOfDishes)
+            case .failure(let error):
+                print(error.localizedDescription)
+                return
+            }
+        }
+    }
+
     private func loadAdvertisementImages() {
 //        load images from the internet
         var listOfFakeCellInfo: [MenuAdvertisementCellInfo] = []
