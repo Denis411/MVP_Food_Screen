@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  SuperEasyAppHammer
-//
-//  Created by Dennis Programmer on 3/4/23.
-//
-
 import UIKit
 import SnapKit
 
@@ -70,7 +63,7 @@ extension MenuViewController: MenuViewControllerProtocol {
         tableView.setCellInfo(cellInfo)
     }
 
-    /// Setts available types of dishs
+    /// Sets available types of dishes
     func setDishTypeCellInfo(cellInfo: [DishTypeCellInfo]) {
         dishTypeView.setDishTypeCellInfo(cellInfo)
     }

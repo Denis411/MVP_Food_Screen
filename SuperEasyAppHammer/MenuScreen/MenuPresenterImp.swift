@@ -6,7 +6,6 @@ protocol MenuViewControllerProtocol: AnyObject {
 }
 
 // MARK: - MenuPresenterImp -
-
 final class MenuPresenterImp {
     private weak var view: MenuViewControllerProtocol?
     private let availableTypesOfDishes = DishType.allCases
