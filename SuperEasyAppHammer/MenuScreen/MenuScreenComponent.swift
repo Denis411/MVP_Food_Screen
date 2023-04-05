@@ -23,11 +23,11 @@ final class MenuScreenComponent: Component<MenuScreenComponentDependency> {
 // MARK: - Use cases -
 extension MenuScreenComponent {
     private var menuDishLoader: MenuDishLoader {
-        MenuDishLoaderImp()
+        MenuDishLoaderImp(networkManager: dependency.networkManager)
     }
 
     private var advertisementPicLoader: MenuAdvertisementPicLoader {
-        MenuAdvertisementPicLoaderImp()
+        MenuAdvertisementPicLoaderImp(networkManager: dependency.networkManager)
     }
 }
 
