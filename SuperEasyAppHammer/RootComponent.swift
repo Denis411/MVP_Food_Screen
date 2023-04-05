@@ -14,6 +14,7 @@ final class RootComponent: BootstrapComponent {
         }
     }
 
+    var networkManager: NetworkManager { NetworkManagerImp() }
     
     var tapBarControllerComponent: TapBarControllerComponent {
         TapBarControllerComponent(parent: self)
