@@ -16,7 +16,21 @@ final class MenuScreenComponent: EmptyDependency {
     }
 
     private var presenter: MenuPresenter {
-        MenuPresenterImp()
+        MenuPresenterImp(
+            menuDishLoader: self.menuDishLoader,
+            advertisementPicLoader: self.advertisementPicLoader
+        )
+    }
+}
+
+// MARK: - Use cases -
+extension MenuScreenComponent {
+    private var menuDishLoader: MenuDishLoader {
+        MenuDishLoaderImp()
+    }
+
+    private var advertisementPicLoader: MenuAdvertisementPicLoader {
+        MenuAdvertisementPicLoaderImp()
     }
 }
 

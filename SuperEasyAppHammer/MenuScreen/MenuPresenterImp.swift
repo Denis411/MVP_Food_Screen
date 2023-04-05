@@ -24,8 +24,16 @@ final class MenuPresenterImp {
     private var dishTypeCellInfo: [DishTypeCellInfo] = []
 
 //  use cases
-    private let menuDishLoader: MenuDishLoader = MenuDishLoaderImp()
-    private let advertisementPicLoader: MenuAdvertisementPicLoader = MenuAdvertisementPicLoaderImp()
+    private let menuDishLoader: MenuDishLoader
+    private let advertisementPicLoader: MenuAdvertisementPicLoader
+
+    init(
+        menuDishLoader: MenuDishLoader,
+        advertisementPicLoader: MenuAdvertisementPicLoader
+    ) {
+        self.menuDishLoader = menuDishLoader
+        self.advertisementPicLoader = advertisementPicLoader
+    }
 }
 
 extension MenuPresenterImp: MenuPresenterSettingView {
