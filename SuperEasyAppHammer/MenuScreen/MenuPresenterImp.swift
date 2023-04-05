@@ -60,31 +60,37 @@ extension MenuPresenterImp: MenuPresenterFunctionality {
 
         view?.setDishTypeCellInfo(cellInfo: dishTypeCellInfo)
 
-        loadDishes(for: .beverage, in: "")
+        DispatchQueue.main.async { [weak self] in
+            self?.loadDishes(for: .beverage, in: "")
+        }
     }
 }
 
 extension MenuPresenterImp {
     private func loadDishes(for type: DishType, in city: String) {
         menuDishLoader.loadDishes(type: type, for: city) { [weak self] result in
-            switch result {
-            case .success(let listOfDishes):
-                self?.view?.setDishCellInfo(cellInfo: listOfDishes)
-            case .failure(let error):
-                print(error.localizedDescription)
-                return
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let listOfDishes):
+                    self?.view?.setDishCellInfo(cellInfo: listOfDishes)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    return
+                }
             }
         }
     }
 
     private func loadAdvertisementImages() {
         advertisementPicLoader.loadPics { [weak self] result in
-            switch result {
-            case .success(let listOfImages):
-                let advertisementCellInfo = listOfImages.map { MenuAdvertisementCellInfo(image: $0) }
-                self?.view?.setAdvertisementInfo(cellInfo: advertisementCellInfo)
-            case .failure(let error):
-                print(error.localizedDescription)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let listOfImages):
+                    let advertisementCellInfo = listOfImages.map { MenuAdvertisementCellInfo(image: $0) }
+                    self?.view?.setAdvertisementInfo(cellInfo: advertisementCellInfo)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }
