@@ -10,6 +10,7 @@
 		8D142F4729DBDE76008DEB68 /* AdvertisementCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4629DBDE76008DEB68 /* AdvertisementCollectionView.swift */; };
 		8D142F4929DBE251008DEB68 /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */; };
 		8D142F4B29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */; };
+		8D33D6F029DD4E240060790B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D6EF29DD4E240060790B /* NetworkManager.swift */; };
 		8D506A2529DA8DA300C42C91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2429DA8DA300C42C91 /* AppDelegate.swift */; };
 		8D506A2729DA8DA300C42C91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */; };
 		8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D506A2829DA8DA300C42C91 /* MenuViewController.swift */; };
@@ -39,6 +40,7 @@
 		8D142F4629DBDE76008DEB68 /* AdvertisementCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionView.swift; sourceTree = "<group>"; };
 		8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAdvertisementCellInfo.swift; sourceTree = "<group>"; };
+		8D33D6EF29DD4E240060790B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8D506A2129DA8DA300C42C91 /* SuperEasyAppHammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperEasyAppHammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D506A2429DA8DA300C42C91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D506A2629DA8DA300C42C91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 			path = AdvertisementView;
 			sourceTree = "<group>";
 		};
+		8D33D6EE29DD4E110060790B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8D33D6EF29DD4E240060790B /* NetworkManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		8D506A1829DA8DA300C42C91 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8D506A3E29DA928100C42C91 /* RootComponent.swift */,
+				8D33D6EE29DD4E110060790B /* Common */,
 				8D506A3A29DA905500C42C91 /* Generated */,
 				8D506A3929DA900E00C42C91 /* Standard */,
 				8D506A4729DAA87E00C42C91 /* TapBarController */,
@@ -347,7 +358,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/SuperEasyAppHammer/Generated/Needle.generated.swift",
+				$SRCROOT/SuperEasyAppHammer/Generated/Needle.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -360,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D33D6F029DD4E240060790B /* NetworkManager.swift in Sources */,
 				8D142F4929DBE251008DEB68 /* AdvertisementCollectionViewCell.swift in Sources */,
 				8DE1B51929DC373F005D25E2 /* MenuAdvertisementPicLoaderImp.swift in Sources */,
 				8D506A2929DA8DA300C42C91 /* MenuViewController.swift in Sources */,
