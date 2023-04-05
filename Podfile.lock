@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.6.4)
   - NeedleFoundation (0.17.2)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - Alamofire
   - NeedleFoundation
   - SnapKit (~> 5.6.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - NeedleFoundation
     - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   NeedleFoundation: 36cfaea9ae9eb527a796f5c1df19296c722666b8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: b3c5f4405f9b9174183fded8f0d1e4125c977a53
+PODFILE CHECKSUM: bab52dffd6281c6b40ab1190711ed8676769bd42
 
 COCOAPODS: 1.11.3

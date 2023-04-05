@@ -7,5 +7,6 @@ target 'SuperEasyAppHammer' do
 
   pod 'SnapKit', '~> 5.6.0'
   pod 'NeedleFoundation' 
+  pod 'Alamofire'
 
 end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		383EE6B39C0B9724539B386A /* Pods_SuperEasyAppHammer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */; };
 		8D142F4729DBDE76008DEB68 /* AdvertisementCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4629DBDE76008DEB68 /* AdvertisementCollectionView.swift */; };
 		8D142F4929DBE251008DEB68 /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */; };
 		8D142F4B29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */; };
@@ -32,11 +31,11 @@
 		8DE1B51429DC1F7F005D25E2 /* MenuScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE1B51329DC1F7F005D25E2 /* MenuScreenView.swift */; };
 		8DE1B51729DC3528005D25E2 /* MenuDishLoaderImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE1B51629DC3528005D25E2 /* MenuDishLoaderImp.swift */; };
 		8DE1B51929DC373F005D25E2 /* MenuAdvertisementPicLoaderImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE1B51829DC373F005D25E2 /* MenuAdvertisementPicLoaderImp.swift */; };
+		E667E9157C2E3E0BADAD6CCF /* Pods_SuperEasyAppHammer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8F517B4CB29389F7F7957 /* Pods_SuperEasyAppHammer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.release.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.release.xcconfig"; sourceTree = "<group>"; };
-		4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperEasyAppHammer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DF85E21DA60258762D36E3 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
 		8D142F4629DBDE76008DEB68 /* AdvertisementCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionView.swift; sourceTree = "<group>"; };
 		8D142F4829DBE251008DEB68 /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D142F4A29DBE26D008DEB68 /* MenuAdvertisementCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAdvertisementCellInfo.swift; sourceTree = "<group>"; };
@@ -63,7 +62,8 @@
 		8DE1B51329DC1F7F005D25E2 /* MenuScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenView.swift; sourceTree = "<group>"; };
 		8DE1B51629DC3528005D25E2 /* MenuDishLoaderImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDishLoaderImp.swift; sourceTree = "<group>"; };
 		8DE1B51829DC373F005D25E2 /* MenuAdvertisementPicLoaderImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAdvertisementPicLoaderImp.swift; sourceTree = "<group>"; };
-		92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.debug.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.debug.xcconfig"; sourceTree = "<group>"; };
+		E47C8EC7480AFEC9178C24C2 /* Pods-SuperEasyAppHammer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperEasyAppHammer.release.xcconfig"; path = "Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer.release.xcconfig"; sourceTree = "<group>"; };
+		F0B8F517B4CB29389F7F7957 /* Pods_SuperEasyAppHammer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperEasyAppHammer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				383EE6B39C0B9724539B386A /* Pods_SuperEasyAppHammer.framework in Frameworks */,
+				E667E9157C2E3E0BADAD6CCF /* Pods_SuperEasyAppHammer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +81,8 @@
 		4E8C6EBD9E0ACDB9CB04E536 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */,
-				14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */,
+				44DF85E21DA60258762D36E3 /* Pods-SuperEasyAppHammer.debug.xcconfig */,
+				E47C8EC7480AFEC9178C24C2 /* Pods-SuperEasyAppHammer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 				8D506A2329DA8DA300C42C91 /* SuperEasyAppHammer */,
 				8D506A2229DA8DA300C42C91 /* Products */,
 				4E8C6EBD9E0ACDB9CB04E536 /* Pods */,
-				B8EEA826348D5CCD89C3F4C7 /* Frameworks */,
+				AB70D7B26CAC4F9F13364129 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,10 +217,10 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B8EEA826348D5CCD89C3F4C7 /* Frameworks */ = {
+		AB70D7B26CAC4F9F13364129 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4BC21EF45EF5D72DCC142A5D /* Pods_SuperEasyAppHammer.framework */,
+				F0B8F517B4CB29389F7F7957 /* Pods_SuperEasyAppHammer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,12 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D506A3529DA8DA600C42C91 /* Build configuration list for PBXNativeTarget "SuperEasyAppHammer" */;
 			buildPhases = (
-				CC6712184C4FF7D862A1E722 /* [CP] Check Pods Manifest.lock */,
+				112DB1195544FBF677569616 /* [CP] Check Pods Manifest.lock */,
 				8D506A3B29DA90FF00C42C91 /* Needle */,
 				8D506A1D29DA8DA300C42C91 /* Sources */,
 				8D506A1E29DA8DA300C42C91 /* Frameworks */,
 				8D506A1F29DA8DA300C42C91 /* Resources */,
-				DE227F6CAFBFF48C5C7F64DB /* [CP] Embed Pods Frameworks */,
+				2E641E5E3E384AD294EFC4C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,27 +294,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8D506A3B29DA90FF00C42C91 /* Needle */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Needle;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/SuperEasyAppHammer/Generated/Needle.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which needle; then\n    SOURCEKIT_LOGGING=0 && needle generate SuperEasyAppHammer/Generated/Needle.generated.swift SuperEasyAppHammer/\nelse\n  echo \"warning: Needle not installed, download from https://github.com/uber/needle using Homebrew\"\nfi\n\n";
-		};
-		CC6712184C4FF7D862A1E722 /* [CP] Check Pods Manifest.lock */ = {
+		112DB1195544FBF677569616 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,7 +316,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE227F6CAFBFF48C5C7F64DB /* [CP] Embed Pods Frameworks */ = {
+		2E641E5E3E384AD294EFC4C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,6 +332,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperEasyAppHammer/Pods-SuperEasyAppHammer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8D506A3B29DA90FF00C42C91 /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/SuperEasyAppHammer/Generated/Needle.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which needle; then\n    SOURCEKIT_LOGGING=0 && needle generate SuperEasyAppHammer/Generated/Needle.generated.swift SuperEasyAppHammer/\nelse\n  echo \"warning: Needle not installed, download from https://github.com/uber/needle using Homebrew\"\nfi\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -515,7 +515,7 @@
 		};
 		8D506A3629DA8DA600C42C91 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92BFF633A4626CB2D4EFEF25 /* Pods-SuperEasyAppHammer.debug.xcconfig */;
+			baseConfigurationReference = 44DF85E21DA60258762D36E3 /* Pods-SuperEasyAppHammer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -544,7 +544,7 @@
 		};
 		8D506A3729DA8DA600C42C91 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14262464F9150C8B639F6065 /* Pods-SuperEasyAppHammer.release.xcconfig */;
+			baseConfigurationReference = E47C8EC7480AFEC9178C24C2 /* Pods-SuperEasyAppHammer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
