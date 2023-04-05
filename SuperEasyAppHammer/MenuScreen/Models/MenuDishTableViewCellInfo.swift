@@ -4,7 +4,7 @@ struct MenuDishTableViewCellInfo {
     let image: UIImage?
     let name: String?
     let description: String?
-    let buttonText: String?
+    let formatedPrice: String?
 }
 
 extension MenuDishTableViewCellInfo {
@@ -13,7 +13,7 @@ extension MenuDishTableViewCellInfo {
             image: UIImage(systemName: "person")!,
             name: "Name",
             description: "Description",
-            buttonText: "from 300 p"
+            formatedPrice: "from 300 p"
         )
     }
 }

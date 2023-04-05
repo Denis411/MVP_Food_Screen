@@ -20,7 +20,7 @@ final class MenuTableViewCell: UITableViewCell {
         self.dishImageView.image = info.image
         self.dishNameTitle.text = info.name
         self.dishDescriptionTitle.text = info.description
-        self.orderButton.setTitle(info.buttonText, for: .normal)
+        self.orderButton.setTitle(info.formatedPrice, for: .normal)
     }
 }
 
