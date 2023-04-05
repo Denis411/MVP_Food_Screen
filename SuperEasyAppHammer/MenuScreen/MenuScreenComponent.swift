@@ -1,6 +1,10 @@
 import NeedleFoundation
 
-final class MenuScreenComponent: EmptyDependency {
+protocol MenuScreenComponentDependency: Dependency {
+    var networkManager: NetworkManager { get }
+}
+
+final class MenuScreenComponent: Component<MenuScreenComponentDependency> {
     private var mainViewController: UIViewController {
         let presenter = presenter
         let menuViewController = MenuViewController(presenter: presenter)

@@ -19,7 +19,10 @@ final class RootComponent: BootstrapComponent {
     var tapBarControllerComponent: TapBarControllerComponent {
         TapBarControllerComponent(parent: self)
     }
-    var menuScreenComponent: MenuScreenComponent { MenuScreenComponent() }
+
+    var menuScreenComponent: MenuScreenComponent {
+        MenuScreenComponent(parent: self)
+    }
 }
 
 // MARK: Mocks

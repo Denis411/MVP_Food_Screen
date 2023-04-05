@@ -9,6 +9,9 @@ private let needleDependenciesHash : String? = nil
 // MARK: - Registration
 
 public func registerProviderFactories() {
+    __DependencyProviderRegistry.instance.registerDependencyProviderFactory(for: "^->RootComponent->MenuScreenComponent") { component in
+        return MenuScreenComponentDependencydfe6076b056d93c80ab2Provider(component: component)
+    }
     __DependencyProviderRegistry.instance.registerDependencyProviderFactory(for: "^->RootComponent") { component in
         return EmptyDependencyProvider(component: component)
     }
@@ -20,6 +23,21 @@ public func registerProviderFactories() {
 
 // MARK: - Providers
 
+private class MenuScreenComponentDependencydfe6076b056d93c80ab2BaseProvider: MenuScreenComponentDependency {
+    var networkManager: NetworkManager {
+        return rootComponent.networkManager
+    }
+    private let rootComponent: RootComponent
+    init(rootComponent: RootComponent) {
+        self.rootComponent = rootComponent
+    }
+}
+/// ^->RootComponent->MenuScreenComponent
+private class MenuScreenComponentDependencydfe6076b056d93c80ab2Provider: MenuScreenComponentDependencydfe6076b056d93c80ab2BaseProvider {
+    init(component: NeedleFoundation.Scope) {
+        super.init(rootComponent: component.parent as! RootComponent)
+    }
+}
 private class TapBarComponentDependencyf6e31cc432e7f2b42353BaseProvider: TapBarComponentDependency {
     var menuScreenComponent: MenuScreenComponent {
         return rootComponent.menuScreenComponent
